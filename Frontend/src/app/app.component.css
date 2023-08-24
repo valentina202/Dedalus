@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea {
+  background-image:linear-gradient(
+    hsl(190,10%,98%), hsl(190,10%,94%)
+);
+  padding:1ex;
+  font-size:1em;
+  box-sizing:border-box;
+  color:black;
+}
+
+/* toggle container */
+
+.card-checkbox.checkbox-outside-card.custom-control-input:checked ~ .custom-control-label::after {
+  background-color: pink; /* Change the background color of the knob when it is checked */
+  border: 2px solid violet; /* Add a border if you prefer */
+}
