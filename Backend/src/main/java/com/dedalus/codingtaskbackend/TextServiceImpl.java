@@ -2,7 +2,6 @@ package com.dedalus.codingtaskbackend;
 
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.Locale;
 import java.util.TreeMap;
 

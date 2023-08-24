@@ -48,7 +48,12 @@ class IntegrationTests {
 
     assertAll(
             () -> assertEquals(HttpStatus.OK.value(), response.getStatus()),
-            () -> assertEquals("Letter 'A' appears 4 times\nLetter 'E' appears 1 times\nLetter 'I' appears 1 times\nLetter 'O' appears 0 times\nLetter 'U' appears 2 times\n",result.text())
+            () -> assertEquals("W\nH\nA\nT\n \nA\n \nB\nE\nA\nU\nT\nI\nF\nU\nL\n \nD\nA\nY\n" +
+                    "Letter 'A' appears 4 times\n" +
+                    "Letter 'E' appears 1 times\n" +
+                    "Letter 'I' appears 1 times\n" +
+                    "Letter 'O' appears 0 times\n" +
+                    "Letter 'U' appears 2 times\n",result.text())
     );
   }
 }

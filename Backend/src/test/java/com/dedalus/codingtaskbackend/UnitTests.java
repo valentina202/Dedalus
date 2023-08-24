@@ -13,7 +13,12 @@ class UnitTests {
     String testString = "New test String";
     TextDto result = this.textService.analyse(true, testString);
 
-    String wantedResult = "Letter 'A' appears 0 times\nLetter 'E' appears 2 times\nLetter 'I' appears 1 times\nLetter 'O' appears 0 times\nLetter 'U' appears 0 times\n";
+    String wantedResult = "N\nE\nW\n \nT\nE\nS\nT\n \nS\nT\nR\nI\nN\nG\n" +
+            "Letter 'A' appears 0 times\n" +
+            "Letter 'E' appears 2 times\n" +
+            "Letter 'I' appears 1 times\n" +
+            "Letter 'O' appears 0 times\n" +
+            "Letter 'U' appears 0 times\n";
 
     Assertions.assertEquals(wantedResult, result.text());
 
@@ -24,7 +29,12 @@ class UnitTests {
     String testString = "New test String";
     TextDto result = this.textService.analyse(false, testString);
 
-    String wantedResult = "Letter 'G' appears 1 times\nLetter 'N' appears 2 times\nLetter 'R' appears 1 times\nLetter 'S' appears 2 times\nLetter 'T' appears 3 times\nLetter 'W' appears 1 times\n";
+    String wantedResult = "Letter 'G' appears 1 times\n" +
+            "Letter 'N' appears 2 times\n" +
+            "Letter 'R' appears 1 times\n" +
+            "Letter 'S' appears 2 times\n" +
+            "Letter 'T' appears 3 times\n" +
+            "Letter 'W' appears 1 times\n";
 
     Assertions.assertEquals(wantedResult, result.text());
   }
